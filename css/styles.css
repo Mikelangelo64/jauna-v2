@@ -202,6 +202,10 @@ html::-webkit-scrollbar {
 .header._scrolled {
   background-color: var(--color-black);
 }
+.header__container {
+  position: relative;
+  z-index: 998;
+}
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -573,8 +577,10 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   }
 }
 .popup-event {
+  z-index: 997;
+}
+.popup-event .popup__scroll {
   margin-top: 6.5rem;
-  padding-bottom: 8.25rem;
 }
 .popup-event .popup__wrapper {
   border: 1px solid var(--color-grey-200);
@@ -702,6 +708,7 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   width: fit-content;
   right: 0;
   top: 0;
+  height: auto;
   cursor: pointer;
 }
 .popup-event .popup__header .popup__close span {

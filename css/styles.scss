@@ -37,6 +37,12 @@ html {
         background-color: var(--color-black);
     }
 
+    //.header__container 
+    &__container {
+        position: relative;
+        z-index: 998;
+    }
+
     //.header__wrapper 
     &__wrapper {
         display: flex;
@@ -272,7 +278,7 @@ html {
         flex-direction: column;
         justify-content: space-between;
 
-        >*+* {
+        > * + * {
             margin-top: px-to-rem(40);
         }
     }
@@ -300,7 +306,6 @@ html {
 
         @include non-mobile-device {
             @include hover-focus-visible {
-
                 img,
                 svg {
                     transform: rotate(90deg);
@@ -404,8 +409,11 @@ html {
     // POPUP EVENT
     // .popup-event
     &-event {
-        margin-top: px-to-rem(104);
-        padding-bottom: px-to-rem(132);
+        z-index: 997;
+        //padding-bottom: px-to-rem(132);
+        .popup__scroll {
+            margin-top: px-to-rem(104);
+        }
 
         // .popup__wrapper
         .popup__wrapper {
@@ -518,6 +526,7 @@ html {
                 width: fit-content;
                 right: 0;
                 top: 0;
+                height: auto;
                 cursor: pointer;
 
                 span {
