@@ -35,7 +35,7 @@
 
         <div class="header__item">
           <a href="#" class="header__logo logo-link">
-            <img src="./assets/img/logo.svg" alt="logo">
+            <img src="./assets/img/logo.svg" alt="logo" class="popup-open" data-popup="_popup-event">
           </a>
         </div>
 
@@ -62,25 +62,116 @@
             <nav class="menu">
               <ul class="menu__list">
                 <li>
-                  <p class="menu__counter">01/</p>
+                  <p class="menu__counter">01<span>/</span></p>
                   <a href="#" class="menu__item">
-                    Про університет
+                    About
                   </a>
                 </li>
                 <li>
-                  <p class="menu__counter">02/</p>
+                  <p class="menu__counter">02<span>/</span></p>
                   <a href="#" class="menu__item">
-                    Освіта
+                    Programme
                   </a>
                 </li>
                 <li>
-                  <p class="menu__counter">03/</p>
+                  <p class="menu__counter">03<span>/</span></p>
                   <a href="#" class="menu__item">
-                    Наука
+                    Contacts
                   </a>
                 </li>
               </ul>
             </nav>
+          </div>
+
+          <div class="popup__footer">
+            <ul class="socials">
+              <li>
+                <a href="#" class="socials__item">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="socials__item">
+                  Youtube
+                </a>
+              </li>
+              <li>
+                <a href="#" class="socials__item">
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-event" data-popupname="_popup-event" aria-modal="true" role="dialog">
+      <div class="popup__scroll">
+        <div class="popup__wrapper">
+
+          <div class="popup__header">
+            <div class="info">
+              <div class="info__date">26 Apr. 3.00 pm</div>
+              <div class="info-artist">
+                <span class="info-artist__name">Lecture</span>
+                <span class="info-artist__location">Location: LMTA</span>
+              </div>
+              <div class="info__notification">registration</div>
+            </div>
+            <button class="popup__close">
+              <span>clothe</span>
+              <img src="./assets/img/close-circle.svg" alt="close">
+            </button>
+          </div>
+
+          <div class="popup__content">
+            <div class="info">
+              <div class="info__col first-col">
+                <div class="first-col__image">
+                  <img src="/assets/img/event-img-1.png" alt="event-img-1">
+                </div>
+                <div class="first-col__text">
+                  <p>Performed by The Honkin’ Dudes Brass Band (Dovydas Stalmokas – saxophones, leader, Mindaugas
+                    Vadoklis – trumpet, Aurimas Rimeikis – trumpet, Dominykas Vyšniauskas – trombone, Jievaras Jasinskis
+                    – trombone, Domantas Razmus – snare drum, Ignas Kasikauskas – bass drum, Lukas Pivoriūnas –
+                    sousaphone).</p>
+                </div>
+              </div>
+
+              <div class="info__col second-col">
+                <div class="second-col__text">
+                  <p>“The piece is about masculinity, lust, beauty and other things. It features Youtube videos
+                    selected by the composer”– Juta Pranulytė</p>
+                </div>
+              </div>
+
+              <div class="info__col third-col">
+                <div class="third-col__item first-item">
+                  <div class="third-col__image">
+                    <img src="/assets/img/event-img-2.png" alt="event-img-2">
+                  </div>
+                  <div class="third-col__text">
+                    <p>“The piece is about masculinity, lust, beauty and other things. It features Youtube videos
+                      selected by the composer”– Juta Pranulytė</p>
+                  </div>
+                </div>
+
+                <div class="third-col__item second-item">
+                  <div class="third-col__image">
+                    <img src="/assets/img/event-img-3.png" alt="event-img-3">
+                  </div>
+                  <div class="third-col__text">
+                    <p>Modus” Chamber Orchestra as well as The Vilnius Municipality Choir “Jauna Muzika” among others.
+                      She is curating “Druskomanija” festival, manages the chamber choir “Melos”, runs creative music
+                      courses for young people and studies art theory and criticism in Vilnius Art Academy.</p>
+                    <p>The Honkin’ Dudes Brass Band was founded by saxophone player Dovydas Stalmokas, inspired by the
+                      New Orleans musical traditions and is appearing both publicly and site-specifically with their
+                      various “risky” improvised programmes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="popup__footer">

@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const openPopup = (evt) => {
     const popupClass = evt.target.dataset.popup;
     const popup = document.querySelector(`[data-popupname=${popupClass}]`);
+    console.log(evt.target);
 
     //console.log(popupAnimations, popupClass, evt.target);
     popupAnimations[popupClass].play();
