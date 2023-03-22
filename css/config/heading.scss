@@ -30,15 +30,18 @@
 
 @mixin text-heading-2 {
     @include text-heading-styles;
+    line-height: 112.5%;
 
     @include viewport-desktop {
-        font-size: px-to-rem(56);
+        font-size: px-to-rem(48);
+        letter-spacing: -0.05em;
     }
     @include viewport-tablet {
-        font-size: px-to-rem(48);
+        font-size: px-to-rem(40);
+        letter-spacing: -0.05em;
     }
     @include viewport-phone {
-        font-size: px-to-rem(30);
+        font-size: px-to-rem(32);
 
     }
 }
