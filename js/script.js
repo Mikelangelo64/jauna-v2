@@ -76,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+  let headerHeight = header ? header.getBoundingClientRect().height : 105;
+  document.body.style.setProperty('--header-big', `${headerHeight}px`);
+
   //popup
   const makeTimelinePopup = (item) => {
     const popupInner = item.querySelector('.popup__scroll');
