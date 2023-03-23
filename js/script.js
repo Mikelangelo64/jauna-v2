@@ -179,4 +179,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+
+  //swipers
+  const swiperNews = new Swiper('.how-slider.swiper', {
+    navigation: {
+      nextEl: '.how__buttons__slider__container .how-slider-next',
+      // prevEl: '.how__buttons__slider__container .how-slider-prev',
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+
+    breakpoints: {
+      550: {
+        slidesPerView: 1,
+      },
+      899: {
+        slidesPerView: 1,
+      },
+      1199: {
+        slidesPerView: 1,
+      },
+    },
+  });
 });
