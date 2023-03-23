@@ -60,15 +60,16 @@
 
 @mixin text-heading-3 {
     @include text-heading-styles;
+    font-weight: 500;
 
     @include viewport-desktop {
-        font-size: px-to-rem(22);
+        font-size: px-to-rem(40);
     }
     @include viewport-tablet {
-        font-size: px-to-rem(22);
+        font-size: px-to-rem(32);
     }
     @include viewport-phone {
-        font-size: px-to-rem(20);
+        font-size: px-to-rem(28);
     }
 }
 

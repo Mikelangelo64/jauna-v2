@@ -1249,3 +1249,311 @@ html {
         }
     }
 }
+
+//PROGRAM------------------------------------------------------------
+.program {
+    @include viewport-tablet-min {
+        margin-top: px-to-rem(42);
+    }
+    @include viewport-phone {
+        margin-top: px-to-rem(32);
+    }
+
+    //.program__wrapper 
+    &__wrapper {
+        border-top: 1px solid var(--color-grey-300);
+        
+        @include viewport-tablet-min {
+            padding-top: px-to-rem(24);
+        }
+        @include viewport-phone {
+            padding-top: px-to-rem(10);
+        }
+        
+        > * + * {
+            @include viewport-tablet-min {
+                margin-top: px-to-rem(74);
+            }
+            @include viewport-phone {
+                margin-top: px-to-rem(50);
+            }
+        }
+    }
+    
+    //.program__header 
+    &__header {
+        display: grid;
+        
+        @include viewport-desktop {
+            grid-template-columns: px-to-rem(378) 1fr;
+            gap: px-to-rem(98);
+        }
+        @include viewport-tablet {
+            grid-template-columns: px-to-rem(378) 1fr;
+            gap: px-to-rem(40);
+        }
+        @include viewport-phone {
+            grid-template-columns: 1fr;
+            gap: px-to-rem(26);
+        }
+    }
+    
+    //.program__title 
+    &__title {
+        @include text-heading-2;
+    }
+    
+    //.program__subtitle 
+    &__subtitle {
+        font-family: $font-family-sans;
+        font-weight: 300;
+        line-height: 130%;
+
+        @include viewport-tablet-min {
+            font-size: px-to-rem(22);
+        }
+        @include viewport-phone {
+            font-size: px-to-rem(16);
+        }
+    }
+    
+    //.program__main 
+    &__main {
+        width: 100%;
+
+        > * + * {
+            @include viewport-tablet-min {
+                margin-top: px-to-rem(8);
+            }
+            @include viewport-phone {
+                margin-top: px-to-rem(48);
+            }
+        }
+    }
+    
+    //.program-list 
+    &-list {
+        width: 100%;
+
+        //.program-list__header 
+        &__header {
+            @include viewport-tablet-min {
+                display: none;
+            }
+            @include viewport-phone {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid var(--color-grey-300);
+                margin-bottom: px-to-rem(20);
+                padding-top: px-to-rem(10);
+            }
+        }
+    }
+    
+    //.program-slider__pagination 
+    &-slider__pagination {
+        width: max-content;
+        font-weight: 400;
+        font-size: px-to-rem(40);
+        line-height: 110%;
+        color: var(--color-grey-300);
+
+        .swiper-pagination-current {
+            color: var(--color-white);
+        }
+    }
+    
+    //.program-slider 
+    &-slider {
+        @include viewport-phone {
+            overflow: visible;
+            // width: calc(100% + 2 * var(--wrap));
+            // margin-left: calc(-1 * var(--wrap));
+        }
+
+        &.swiper {
+            .swiper-wrapper {
+                @include viewport-tablet-min {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: px-to-rem(10);
+                }
+            }
+            .swiper-slide {
+            }
+        }
+        
+        //.program-slider__item 
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid var(--color-grey-300);
+            
+            @include viewport-tablet-min {
+                height: px-to-rem(438);
+                padding: px-to-rem(24) px-to-rem(30);
+            }
+            @include viewport-phone {
+                height: px-to-rem(372);
+                padding: px-to-rem(16) px-to-rem(20);
+            }
+        }
+        
+        //.program-slider__header 
+        &__header {
+            flex: 1 0 auto;
+
+            > * + * {
+                @include viewport-tablet-min {
+                    margin-top: px-to-rem(42);
+                }
+                @include viewport-phone {
+                    margin-top: px-to-rem(20);
+                }
+            }
+        }
+        
+        //.program-slider__date 
+        &__date {
+            display: flex;
+
+            &._desktop {
+                width: 100%;
+                justify-content: space-between;
+
+                @include viewport-desktop {
+                    font-size: px-to-rem(32);
+                }
+                @include viewport-tablet {
+                    font-size: px-to-rem(24);
+                }
+                @include viewport-phone {
+                    font-size: px-to-rem(24);
+                }
+                
+                span {
+                    @include viewport-phone {
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &._mobile {
+                font-size: px-to-rem(40);
+                line-height: 100%;
+            }
+        }
+        
+        //.program-slider__title__wrapper 
+        &__title__wrapper {
+            display: block;
+            text-decoration: none;
+        }
+        
+        //.program-slider__title 
+        &__title {
+            @include text-heading-3;
+            transition: color 0.3s ease;
+            color: var(--color-white);
+            
+            @include non-mobile-device {
+                @include hover-focus-visible {
+                    color: var(--color-highlight);
+                }
+            }
+        }
+        
+        //.program-slider__main 
+        &__main {
+            @include viewport-desktop {
+                margin-top: px-to-rem(30);
+                font-size: px-to-rem(32);
+            }
+            @include viewport-tablet {
+                margin-top: px-to-rem(12);
+                font-size: px-to-rem(24);
+            }
+            @include viewport-phone {
+                margin-top: px-to-rem(10);
+                font-size: px-to-rem(20);
+            }
+        }
+        
+        //.program-slider__footer 
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-family: $font-family-sans;
+            text-transform: uppercase;
+
+            @include viewport-desktop {
+                margin-top: px-to-rem(54);
+                font-size: px-to-rem(16);
+                letter-spacing: 0.02em;
+            }
+            @include viewport-tablet {
+                margin-top: px-to-rem(24);
+                font-size: px-to-rem(16);
+                letter-spacing: 0.02em;
+            }
+            @include viewport-phone {
+                margin-top: px-to-rem(36);
+                font-size: px-to-rem(16);
+            }
+
+            > * + * {
+                @include viewport-tablet-min {
+                    margin-top: 0.025em;
+                }
+                @include viewport-phone {
+                    margin-top: px-to-rem(8);
+                }
+            }
+        }
+        
+        //.program-slider__link 
+        &__link {
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+            color: var(--color-white);
+    
+            @include non-mobile-device {
+                @include hover-focus-visible {
+                    color: var(--color-highlight);
+    
+                    &::before {
+                        background-color: var(--color-highlight);
+                    }
+                }
+            }
+    
+            &::before {
+                content: '';
+                border-radius: 50%;
+                background-color: var(--color-white);
+                transition: background 0.3s ease;
+    
+                @include viewport-tablet-min {
+                    width: px-to-rem(12);
+                    height: px-to-rem(12);
+                    margin-right: px-to-rem(8);
+                }
+    
+                @include viewport-phone {
+                    width: px-to-rem(8);
+                    height: px-to-rem(8);
+                    margin-right: px-to-rem(6);
+                }
+            }
+        }
+    }
+}
+._link {
+}
