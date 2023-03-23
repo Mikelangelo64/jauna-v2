@@ -975,7 +975,7 @@ html:not(.v-mobile) .socials__item:focus-visible::before {
 .banner {
   min-height: 70vh;
   min-height: calc(70 * var(--vh, 1vh) - var(--header-big));
-  margin-top: var(--header-big);
+  margin-top: 105px;
   overflow-y: visible;
   overflow-x: clip;
 }
@@ -2182,4 +2182,99 @@ html:not(.v-mobile) .program-slider__link:focus-visible::before {
 .footer__socials .developer a path {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+.partners__wrapper {
+  padding-top: 7rem;
+}
+.partners__list {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  row-gap: 1.25rem;
+  margin-top: 50px;
+}
+@media (min-width: 1200px) {
+  .partners__list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .partners__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 899px) {
+  .partners__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 899px) and (max-width: 550px) {
+  .partners__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.partners__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 26.375rem;
+  height: 26.375rem;
+}
+.partners__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  height: 1px;
+  background: var(--color-grey-300);
+}
+.partners__item.item-1:before, .partners__item.item-2:before {
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 65%;
+  width: 76%;
+  height: 1px;
+  background: var(--color-grey-300);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.partners__item.item-2:after {
+  left: 11%;
+  width: 76%;
+}
+.partners__item.item-3:after {
+  left: unset;
+  right: 0;
+}
+.partners__item.item-4 {
+  height: 0.0625rem;
+}
+.partners__item.item-4:before {
+  content: none;
+}
+.partners__label {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 1.5rem;
 }
