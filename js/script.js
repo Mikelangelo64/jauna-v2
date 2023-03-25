@@ -162,14 +162,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const openedPopups = document.querySelectorAll('.popup._opened');
     const popupClass = evt.target.dataset.popup;
     const popup = document.querySelector(`[data-popupname=${popupClass}]`);
-    //console.log(evt.target);
+    //console.log(evt.target, this);
 
     if (!popup) {
       return;
     }
 
     if (openedPopups.length !== 0) {
-      console.log(openedPopups);
+      //console.log(openedPopups);
       openedPopups.forEach((opened) => {
         closePopup(opened);
       });

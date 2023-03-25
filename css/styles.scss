@@ -1435,7 +1435,9 @@ html {
                 opacity: 0;
 
                 @at-root .program-slider__item:hover::before {
-                    opacity: 1;
+                    @include non-mobile-device {
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -1500,6 +1502,7 @@ html {
         //.program-slider__title 
         &__title {
             @include text-heading-3;
+            pointer-events: none;
             transition: color 0.3s ease;
             color: var(--color-white);
             
@@ -1767,24 +1770,34 @@ html {
             line-height: 108%;
         }
 
+        //.footer-contacts__main 
         &__main {
             margin-top: px-to-rem(40);
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-
-            @include viewport-phone {
-                flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(px-to-rem(270), 1fr));
+            
+            @include viewport-desktop {
+                gap: px-to-rem(50) px-to-rem(110);
             }
-
-            >*+* {
-                margin-left: px-to-rem(120);
-
-                @include viewport-phone {
-                    margin-left: 0;
-                    margin-top: px-to-rem(28);
-                }
+            @include viewport-tablet-max {
+                gap: px-to-rem(50) px-to-rem(60);
             }
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: flex-start;
+
+            // @include viewport-phone {
+            //     flex-direction: column;
+            // }
+
+            // >*+* {
+            //     margin-left: px-to-rem(120);
+
+            //     @include viewport-phone {
+            //         margin-left: 0;
+            //         margin-top: px-to-rem(28);
+            //     }
+            // }
         }
 
         &__item {
@@ -1899,8 +1912,6 @@ html {
 
     &__list {
         display: grid;
-        column-gap: px-to-rem(20);
-        row-gap: px-to-rem(20);
         margin-top: 50px;
 
         @include viewport-desktop {
@@ -1908,7 +1919,7 @@ html {
         }
 
         @include viewport-tablet {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         @include viewport-phone {
@@ -1927,10 +1938,8 @@ html {
         justify-content: center;
         align-items: center;
 
-        width: px-to-rem(422);
-        height: px-to-rem(422);
-
-        // border: 1px solid var(--color-grey-300);
+        padding-top: 100%;
+        width: 100%;
 
         &:after {
             content: "";
@@ -1942,38 +1951,91 @@ html {
             background: var(--color-grey-300);
         }
 
-        &.item-1:before,
-        &.item-2:before {
-            content: "";
-            position: absolute;
-            top: 53%;
-            left: 65%;
-            width: 76%;
-            height: 1px;
-            background: var(--color-grey-300);
-            transform: rotate(90deg);
-        }
-
-        &.item-2:after {
-            left: 11%;
-            width: 76%;
-        }
-
-        &.item-3:after {
-            left: unset;
-            right: 0;
-        }
-
-        &.item-4 {
+        &.item-empty {
             height: px-to-rem(1);
-
+            padding-top: 0;
 
             &:before {
-                content: none;
+                content: none!important;
             }
         }
 
-     
+        @include viewport-tablet-min {
+            &.item-1:before,
+            &.item-2:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 62%;
+                width: 76%;
+                height: 1px;
+                background: var(--color-grey-300);
+                transform: rotate(90deg);
+            }
+
+            &.item-2:after {
+                left: 12%;
+                width: 76%;
+            }
+
+            &.item-3:after {
+                left: unset;
+                right: 0;
+            }
+        }
+
+        @include viewport-phone {
+
+            &:nth-child(2n):after {
+                left: unset;
+                right: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 62%;
+                width: 76%;
+                height: 1px;
+                background: var(--color-grey-300);
+                transform: rotate(90deg);
+            }
+
+            &:nth-child(2n):before {
+                content: none;
+            }
+
+            &.item-desc {
+                display: none;
+            }
+        }
+
+        
+        &.item-mob {
+            @include viewport-tablet-min {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            @include viewport-phone {
+                width: 50%;
+            }
+        }
     }
 
     &__label {
@@ -1982,5 +2044,11 @@ html {
         left: 25px;
 
         font-size: px-to-rem(24);
+
+        @include viewport-phone {
+            font-size: px-to-rem(14);
+        top: 11px;
+        left: 0;
+        }
     }
 }
