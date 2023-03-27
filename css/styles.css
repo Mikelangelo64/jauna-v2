@@ -703,6 +703,9 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   line-height: 100%;
   text-transform: uppercase;
   position: relative;
+  color: var(--color-white);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .popup-event .popup__header .info__notification:before {
   content: "";
@@ -712,6 +715,14 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   border-radius: 7.5px;
   background-color: var(--color-white);
   margin-right: 0.5rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.popup-event .popup__header .info__notification:hover {
+  color: var(--color-highlight);
+}
+.popup-event .popup__header .info__notification:hover::before {
+  background-color: var(--color-highlight);
 }
 .popup-event .popup__header .popup__close {
   position: absolute;
@@ -796,27 +807,14 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   position: relative;
   width: 63%;
 }
-.popup-event .popup__content .info .first-col__image__container {
-  padding-top: 64%;
-}
-@media (max-width: 899px) {
-  .popup-event .popup__content .info .first-col__image__container {
-    padding-top: 64%;
-  }
-}
 @media (max-width: 899px) {
   .popup-event .popup__content .info .first-col__image {
     width: 100%;
   }
 }
 .popup-event .popup__content .info .first-col__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
 }
 .popup-event .popup__content .info .first-col__text {
   width: 34%;
@@ -834,9 +832,7 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   display: block;
 }
 .popup-event .popup__content .info .second-col__text {
-  font-size: 2rem;
   line-height: 118%;
-  max-width: 45rem;
 }
 .popup-event .popup__content .info .second-col__text > * + * {
   margin-top: 1.25rem;
@@ -870,17 +866,9 @@ html:not(.v-mobile) .popup__close:focus-visible svg {
   position: relative;
   width: 100%;
 }
-.popup-event .popup__content .info .third-col__image__container {
-  padding-top: 66%;
-}
 .popup-event .popup__content .info .third-col__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
 }
 .popup-event .popup__content .info .third-col__text {
   margin-top: 2rem;
@@ -1910,15 +1898,15 @@ html:not(.v-mobile) .program-slider__link:focus-visible::before {
   }
 }
 .how .how__title {
-  max-width: 18.75rem;
+  max-width: 22.25rem;
   font-size: 3rem;
   line-height: 108%;
-  margin-right: 11rem;
+  margin-right: 7.5rem;
 }
 @media (max-width: 899px) {
   .how .how__title {
     font-size: 2rem;
-    max-width: 11.25rem;
+    max-width: 14.75rem;
     margin-right: 0rem;
   }
 }

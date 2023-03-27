@@ -512,6 +512,8 @@ html {
                     line-height: 100%;
                     text-transform: uppercase;
                     position: relative;
+                    color: var(--color-white);
+                    transition: 0.3s ease;
 
                     &:before {
                         content: '';
@@ -523,6 +525,15 @@ html {
                         border-radius: 7.5px;
                         background-color: var(--color-white);
                         margin-right: px-to-rem(8);
+                        transition: 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: var(--color-highlight);
+
+                        &::before {
+                            background-color: var(--color-highlight);
+                        }
                     }
                 }
             }
@@ -607,26 +618,29 @@ html {
                         position: relative;
                         width: 63%;
                         
-                        &__container {
-                            padding-top: 64%;
+                        // &__container {
+                        //     padding-top: 64%;
 
-                            @include viewport-phone {
-                                padding-top: 64%;
-                            }
-                        }
+                        //     @include viewport-phone {
+                        //         padding-top: 64%;
+                        //     }
+                        // }
 
                         @include viewport-phone {
                             width: 100%;
                         }
 
                         img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
                             width: 100%;
-                            height: 100%;
-                            -o-object-fit: cover;
-                            object-fit: cover;
+                            height: auto;
+
+                            // position: absolute;
+                            // top: 0;
+                            // left: 0;
+                            // width: 100%;
+                            // height: 100%;
+                            // -o-object-fit: cover;
+                            // object-fit: cover;
                         }
                     }
 
@@ -652,9 +666,9 @@ html {
 
                     // .second-col__text
                     &__text {
-                        font-size: px-to-rem(32);
+                        // font-size: px-to-rem(32);
                         line-height: 118%;
-                        max-width: px-to-rem(720);
+                        // max-width: px-to-rem(720);
 
                         > * + * {
                             margin-top: px-to-rem(20);
@@ -704,18 +718,20 @@ html {
                         position: relative;
                         width: 100%;
 
-                        &__container {
-                            padding-top: 66%;
-                        }
+                        // &__container {
+                        //     padding-top: 66%;
+                        // }
 
                         img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
                             width: 100%;
-                            height: 100%;
-                            -o-object-fit: cover;
-                            object-fit: cover;
+                            height: auto;
+                            // position: absolute;
+                            // top: 0;
+                            // left: 0;
+                            // width: 100%;
+                            // height: 100%;
+                            // -o-object-fit: cover;
+                            // object-fit: cover;
                         }
                     }
 
@@ -1641,14 +1657,14 @@ html {
 
     // .how__title
     .how__title {
-        max-width: px-to-rem(300);
+        max-width: px-to-rem(356);
         font-size: px-to-rem(48);
         line-height: 108%;
-        margin-right: px-to-rem(176);
+        margin-right: px-to-rem(120);
 
         @include viewport-phone {
             font-size: px-to-rem(32);
-            max-width: px-to-rem(180);
+            max-width: px-to-rem(236);
             margin-right: px-to-rem(0);
 
         }
