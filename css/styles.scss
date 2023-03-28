@@ -59,6 +59,12 @@ html {
                 display: none;
             }
         }
+
+        &:nth-child(3) {
+            @include viewport-phone {
+                display: flex;
+            }
+        }
     }
 
     //.header__logo 
@@ -103,6 +109,13 @@ html {
         &.lang-item-current {
             color: var(--color-white);
 
+        }
+    }
+
+    &-mob {
+        margin: 0 20px;
+        @include viewport-tablet-min {
+            display: none;
         }
     }
 }

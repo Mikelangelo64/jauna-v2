@@ -228,6 +228,13 @@ html::-webkit-scrollbar {
     display: none;
   }
 }
+@media (max-width: 899px) {
+  .header__item:nth-child(3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .header__logo {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -271,6 +278,14 @@ html:not(.v-mobile) .menu__lang .lang-item:focus-visible {
 
 .menu__lang .lang-item.lang-item-current {
   color: var(--color-white);
+}
+.menu__lang-mob {
+  margin: 0 20px;
+}
+@media (min-width: 900px) {
+  .menu__lang-mob {
+    display: none;
+  }
 }
 
 .menu-burger {
