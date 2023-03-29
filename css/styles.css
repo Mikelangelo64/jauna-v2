@@ -2157,6 +2157,9 @@ html:not(.v-mobile) .program-slider__link:focus-visible::before {
     margin-top: 3.125rem;
   }
 }
+.footer__socials__list {
+  max-width: 350px;
+}
 @media (max-width: 899px) {
   .footer__socials .developer {
     margin-top: 1.125rem;
