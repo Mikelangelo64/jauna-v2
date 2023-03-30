@@ -1315,7 +1315,7 @@ html {
         color: var(--color-grey-200);
         transform: rotate(-90deg);
         opacity: 0.8;
-        z-index: 10;
+        z-index: 2;
 
         @include viewport-tablet-min {
             font-size: px-to-rem(20);
