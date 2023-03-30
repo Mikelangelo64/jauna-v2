@@ -1306,18 +1306,27 @@ html {
     // .video__author
     &__author {
         position: absolute;
-        right: px-to-rem(18);
-        bottom: px-to-rem(16);
+        width: 100%;
+        top: 6%;
+        left: 48%;
         font-family: $font-family-sans;
         font-weight: 300;
         line-height: 130%;
+        color: var(--color-grey-200);
+        transform: rotate(-90deg);
+        opacity: 0.8;
         z-index: 10;
 
         @include viewport-tablet-min {
-            font-size: px-to-rem(22);
+            font-size: px-to-rem(20);
         }
         @include viewport-phone {
             font-size: px-to-rem(16);
+
+            @media (max-width: 768px) {
+                top: 65%;
+                left: 45%;
+            }
         }
     }
 }
